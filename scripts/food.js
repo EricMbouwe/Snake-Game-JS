@@ -1,12 +1,12 @@
 import { onSnake, expandSnake } from "./snake.js";
 // set our food postion in the grid (x -> column, y -> row)
-let food = { x: 10, y: 2 }
+let food = getRandomFoodPosition()
 const EXPANSION_RATE = 1
 
 export function update() {
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE)
-    food = { x: 20, y: 10 }
+    food = getRandomFoodPosition()
   }
 }
 
@@ -16,4 +16,12 @@ export function draw(gameBoard) {
   foodElement.style.gridColumnStart = food.x
   foodElement.className = 'food'
   gameBoard.appendChild(foodElement)
+}
+
+function getRandomFoodPosition() {
+  let newFoodposition
+  while (newFoodposition == null || onSnake(newFoodposition)) {
+    newFoodposition = randomGridPosition()
+  }
+  return newFoodposition
 }

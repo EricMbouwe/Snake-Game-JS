@@ -10,7 +10,7 @@ export function update() {
   // the logic here is to shift the head and make each segment(but not the tail) below the head to take the previous position of his following
 
   addSegments()
-  
+
   // snakeBody[i + 1] is the segment before the last one, it take the place of the last. the process is repeated until i = 0
   const inputDirection = getInputDirection()
   for (let i = snakeBody.length - 2; i >= 0; i--) {
@@ -52,4 +52,6 @@ function addSegments() {
   for (let i = 0; i < newSegments; i++) {
     snakeBody.push({ ...snakeBody[snakeBody.length - 1] })
   }
+
+  newSegments = 0
 }
