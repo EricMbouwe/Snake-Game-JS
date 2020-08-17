@@ -18,9 +18,11 @@ function main(currentTime) {
 
 window.requestAnimationFrame(main)
 
+
 function update() {
   updateSnake()
   updateFood()
+  checkDeath()
 }
  
 function draw() {
@@ -29,4 +31,8 @@ function draw() {
 
   drawSnake(gameBoard)
   drawFood(gameBoard)
+}
+
+function checkDeath() {
+  const gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
 }
