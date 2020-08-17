@@ -18,9 +18,8 @@ export function update() {
   }
 
   //we update the head position
-  const head = snakeBody[0]
-  head.x += inputDirection.x
-  head.y += inputDirection.y
+  snakeBody[0].x += inputDirection.x
+  snakeBody[0].y += inputDirection.y
 }
 
 export function draw(gameBoard) {
