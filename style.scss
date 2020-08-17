@@ -29,16 +29,40 @@ body {
 }
 
 .virtual-arrows {
+  display: grid;
+  grid-template-areas:
+    ". btn1 ."
+    "btn3 btn2 btn4";
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(20px, auto);
+  gap: 2px;
   position: absolute;
   bottom: 1rem;
-  background-color: yellow;
+  opacity: 0.2;
+
+  .up-btn {
+    grid-area: btn1;
+  }
+
+  .down-btn {
+    grid-area: btn2;
+  }
+  .right-btn {
+    grid-area: btn4;
+  }
+
+  .left-btn {
+    grid-area: btn3;
+  }
 
   button {
     font-size: 10vmin;
     background-color: #ccc;
+    color: #fff;
+    border-radius: 4px;
 
     &:focus {
-      transform: scale(1.1, 1.1);
+      transform: scale(1.05, 1.05);
     }
   }
 }

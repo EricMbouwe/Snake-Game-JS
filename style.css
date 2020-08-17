@@ -38,18 +38,51 @@ body {
 }
 
 .virtual-arrows {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: ". btn1 ." "btn3 btn2 btn4";
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(20px, auto);
+  gap: 2px;
   position: absolute;
   bottom: 1rem;
-  background-color: yellow;
+  opacity: 0.2;
+}
+
+.virtual-arrows .up-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: btn1;
+}
+
+.virtual-arrows .down-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: btn2;
+}
+
+.virtual-arrows .right-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: btn4;
+}
+
+.virtual-arrows .left-btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: btn3;
 }
 
 .virtual-arrows button {
   font-size: 10vmin;
   background-color: #ccc;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .virtual-arrows button:focus {
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 /*# sourceMappingURL=style.css.map */
