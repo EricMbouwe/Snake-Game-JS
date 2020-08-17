@@ -1,6 +1,6 @@
 import { getInputDirection } from "./inputs.js"
 
-export const SNAKE_SPEED = 2
+export const SNAKE_SPEED = 5
 
 // set our snake postion in the grid (x -> row, y -> column)
 const snakeBody = [{ x: 11, y: 11 }]
