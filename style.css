@@ -39,12 +39,17 @@ body {
 
 .virtual-arrows {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   background-color: yellow;
 }
 
 .virtual-arrows button {
-  font-size: 3rem;
+  font-size: 10vmin;
   background-color: #ccc;
+}
+
+.virtual-arrows button:focus {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
 }
 /*# sourceMappingURL=style.css.map */

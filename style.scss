@@ -30,11 +30,15 @@ body {
 
 .virtual-arrows {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   background-color: yellow;
 
   button {
-    font-size: 3rem;
+    font-size: 10vmin;
     background-color: #ccc;
+
+    &:focus {
+      transform: scale(1.1, 1.1);
+    }
   }
 }
