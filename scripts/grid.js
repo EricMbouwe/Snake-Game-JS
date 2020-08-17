@@ -8,6 +8,7 @@ export function randomGridPosition() {
 }
 
 export function outsideGrid(position) {
+  // valid positions are { x : [1 - 21], y: [1- 21]}
   return(
     position.x < 1 || position.x > GRID_SIZE ||
     position.y < 1 || position.y > GRID_SIZE

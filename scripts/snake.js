@@ -54,3 +54,7 @@ function addSegments() {
 
   newSegments = 0
 }
+
+export function getSnakeHead() {
+  return snakeBody[0]
+}
