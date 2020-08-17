@@ -1,4 +1,5 @@
 body {
+  position: relative;
   height: 100vh;
   width: 100vw;
   display: -webkit-box;
@@ -34,5 +35,16 @@ body {
 .food {
   background-color: yellow;
   border: .25vmin solid #000;
+}
+
+.virtual-arrows {
+  position: absolute;
+  bottom: 0;
+  background-color: yellow;
+}
+
+.virtual-arrows button {
+  font-size: 3rem;
+  background-color: #ccc;
 }
 /*# sourceMappingURL=style.css.map */
