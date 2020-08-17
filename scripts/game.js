@@ -1,13 +1,17 @@
 import { update as updateSnake, draw as drawSnake, SNAKE_SPEED } from './snake.js'
 import { update as updateFood, draw as drawFood } from "./food.js";
 
-const gameBoard = document.getElementById('board')
 let lastRenderTime = 0
+let gameOver
+const gameBoard = document.getElementById('board')
 
 function main(currentTime) {
-  const secondsSinceLastRenderTime = (currentTime - lastRenderTime) / 1000
+  if (gameOver) {
+    return alert('You lose')
+  }
+  
   window.requestAnimationFrame(main)
-
+  const secondsSinceLastRenderTime = (currentTime - lastRenderTime) / 1000
   if (secondsSinceLastRenderTime < 1 / SNAKE_SPEED) return
 
   lastRenderTime = currentTime
@@ -34,5 +38,5 @@ function draw() {
 }
 
 function checkDeath() {
-  const gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
+  gameOver = outsideGrid(getSnakeHead()) || snakeIntersection()
 }
