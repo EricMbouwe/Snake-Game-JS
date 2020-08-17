@@ -85,4 +85,14 @@ body {
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
 }
+
+@media screen and (min-width: 1026px) {
+  .virtual-arrows {
+    right: 1rem;
+    opacity: 0.4;
+    top: 30vmin;
+    bottom: initial;
+        grid-template-areas: ". btn1 ." "btn3 . btn4" ". btn2 .";
+  }
+}
 /*# sourceMappingURL=style.css.map */
