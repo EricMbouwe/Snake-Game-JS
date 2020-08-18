@@ -1,3 +1,8 @@
+const upButton = document.getElementById('upBtn')
+const downButton = document.getElementById('downBtn')
+const rightButton = document.getElementById('rightBtn')
+const leftButton = document.getElementById('leftBtn')
+
 let inputDirection = { x: 0, y: 0 }
 let lastInputDirection = { x: 0, y: 0 }
 
@@ -26,3 +31,23 @@ window.addEventListener('keydown', e => {
       break
   }
 })
+
+upButton.addEventListener('click', function() {
+  // if (lastInputDirection.y !== 0) return
+  inputDirection = { x: 0, y: -1 }
+}, false)
+
+downButton.addEventListener('click', function() {
+  // if (lastInputDirection.y !== 0) return
+  inputDirection = { x: 0, y: 1 }
+}, false)
+
+leftButton.addEventListener('click', function() {
+  // if (lastInputDirection.y !== 0) return
+  inputDirection = { x: -1, y: 0 }
+}, false)
+
+rightButton.addEventListener('click', function() {
+  // if (lastInputDirection.y !== 0) return
+  inputDirection = { x: 1, y: 0 }
+}, false)
