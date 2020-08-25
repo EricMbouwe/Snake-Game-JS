@@ -1,4 +1,6 @@
 const GRID_SIZE = 21
+const endGame = document.getElementById('endGame')
+const message = document.getElementById('message')
 
 export function randomGridPosition() {
   return {
@@ -14,3 +16,14 @@ export function outsideGrid(position) {
     position.y < 1 || position.y > GRID_SIZE
   )
 }
+
+export function endGamePanel() {
+  endGame.classList.add('show')
+}
+
+export function restart() {
+  endGame.classList.remove('show')
+  window.location = '/'
+}
+
+message.addEventListener('click', restart)

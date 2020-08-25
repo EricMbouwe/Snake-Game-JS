@@ -67,6 +67,43 @@ body {
   }
 }
 
+
+.end-game{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+
+  button {
+    font-size: 2.5rem;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 5px 0;
+    cursor: pointer;
+    
+    &:hover {
+      border: 1px solid #fff;
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  &.show {
+    display: flex;
+  }
+}
+
+
 @media screen and (min-width: 1026px) {
   .virtual-arrows {
     right: 1rem;
