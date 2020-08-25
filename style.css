@@ -100,7 +100,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
-  font-size: 5rem;
   background-color: rgba(0, 0, 0, 0.8);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -110,6 +109,8 @@ body {
 
 .end-game p {
   margin: 1rem;
+  text-align: center;
+  font-size: 4rem;
 }
 
 .end-game button {
@@ -130,7 +131,6 @@ body {
 
 .end-game small {
   font-size: .8rem;
-  text-align: center;
   font-weight: bold;
   position: absolute;
   bottom: 0;
