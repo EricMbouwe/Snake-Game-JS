@@ -6,11 +6,11 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #000;
+  background-color: #eee;
 }
 
 #board {
-  background-color: #eee;
+  background-color: #000;
   width: 100vmin;
   height: 100vmin;
   display: grid;
@@ -19,12 +19,12 @@ body {
 }
 
 .snake {
-  background-color: blue;
+  background-color: purple;
   border: .25vmin solid #000;
 }
 
 .food {
-  background-color: yellow;
+  background-color: green;
   border: .25vmin solid #000;
 }
 
