@@ -33,21 +33,21 @@ window.addEventListener('keydown', e => {
 })
 
 upButton.addEventListener('click', function() {
-  // if (lastInputDirection.y !== 0) return
+  if (lastInputDirection.y !== 0) return
   inputDirection = { x: 0, y: -1 }
-}, false)
+})
 
 downButton.addEventListener('click', function() {
-  // if (lastInputDirection.y !== 0) return
+  if (lastInputDirection.y !== 0) return
   inputDirection = { x: 0, y: 1 }
-}, false)
+})
 
 leftButton.addEventListener('click', function() {
-  // if (lastInputDirection.y !== 0) return
+  if (lastInputDirection.x !== 0) return
   inputDirection = { x: -1, y: 0 }
-}, false)
+})
 
 rightButton.addEventListener('click', function() {
-  // if (lastInputDirection.y !== 0) return
+  if (lastInputDirection.x !== 0) return
   inputDirection = { x: 1, y: 0 }
-}, false)
+})
