@@ -108,6 +108,10 @@ body {
           flex-direction: column;
 }
 
+.end-game p {
+  margin: 1rem;
+}
+
 .end-game button {
   font-size: 2.5rem;
   background-color: white;
@@ -122,6 +126,16 @@ body {
   border: 1px solid #fff;
   background-color: #000;
   color: #fff;
+}
+
+.end-game small {
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .end-game.show {
